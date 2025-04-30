@@ -21,6 +21,7 @@ SIZE = COMM.Get_size()
 class _Channel:
     def __init__(self, name: str):
         self.name = name
+        # todo: remove self.channel_data (this is from an older iteration)
         self.channel_data = _Timed_Data()
         self.reader_ranks: set[int] = set()
         self.local_readers: set[_Reader] = set()
