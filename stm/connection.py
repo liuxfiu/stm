@@ -35,7 +35,7 @@ class _Reader:
         # return item
 
     def consume_until(self, time: int):
-        if time >= self.keeptime:
+        if time > self.keeptime:
             for ts in range(self.keeptime, time + 1):
                 del self.data[ts]
             self.keeptime = time

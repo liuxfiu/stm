@@ -28,6 +28,7 @@ class _Channel:
         self._writers_advancetime = _PQDict_()
 
     # todo: maybe writers can do this instead?
+    # todo: optimize for readers that already consumed until 'ts'
     def publish_data(self, ts: int, item: Any):
         self.channel_data[ts] = item
         for reader in self.local_readers:
