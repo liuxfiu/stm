@@ -1,6 +1,7 @@
 from typing import Any
 
 
+# todo: support floating point numbers as keys
 class _Timed_Data:
     def __init__(self):
         self._data = {}
